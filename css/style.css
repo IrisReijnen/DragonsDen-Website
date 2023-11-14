@@ -1,13 +1,85 @@
-* {
+/* * {
     font-family: 'Montserrat', sans-serif; 
- }
+}
 
- img {
-    width: 50px;
-    height: 50px;
- }
 
- .container {
+
+.containerRow {
     display: flex;
     flex-direction: row;
- }
+}
+
+.containerColumn {
+    display: flex;
+    flex-direction: column;
+} */
+
+img {
+    width: 35px;
+    height: 35px;
+}
+
+.padding-nav {
+    padding: 10px;
+}
+
+/* Add some basic styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Style for the navigation bar */
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Style for the menu icon */
+.menu {
+    background-color: #333;
+    height: 100%;
+    width: 25px; /* Adjust the width as needed */
+    display: flex;
+    align-items: center;
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Style for the profile icon */
+#profile-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Style for the content container */
+.content {
+    padding: 20px;
+}
+
+/* Style for the title and image */
+#title-image-container {
+    display: flex;
+    align-items: center;
+}
+
+#title {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+#main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
