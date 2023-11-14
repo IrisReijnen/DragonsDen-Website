@@ -9,27 +9,22 @@ An app used for emergencies which allows the paramedics to be tracked by the hos
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* An ide which supports html, css and Java Script. along with a working OS
+* ex visual studio and windows 10
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Clone the repo and open it in your prefered IDE to run the progam open the index.html in the file explorer
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+To run the progam open the index.html in the file explore.
 
 ## Help
 
 Any advise for common problems or issues.
 ```
-command to run if program contains helper info
+The location of the user may not always be acurate depending on their hardware.
 ```
 
 ## Authors
@@ -50,7 +45,7 @@ Niels Toemen
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the ROC.inc License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
