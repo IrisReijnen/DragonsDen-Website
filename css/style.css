@@ -77,7 +77,7 @@ nav {
     display: flex;
     flex: 1;
     padding: 20px;
-    height: 400px;
+    height: 600px;
 }
 
 /* Style for the left box */
@@ -94,9 +94,23 @@ nav {
 .right-box {
     flex: 1;
     background-color: white; /* Adjust the background color as needed */
-    padding: 10px;
+    padding: 30px;
     border-radius: 5px;
     border: 1px solid #ccc;
+}
+
+/* Style for the button */
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Style for the title and image */
