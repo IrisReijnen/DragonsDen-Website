@@ -1,17 +1,3 @@
-/* * {
-    font-family: 'Montserrat', sans-serif; 
-}
-
-.containerRow {
-    display: flex;
-    flex-direction: row;
-}
-
-.containerColumn {
-    display: flex;
-    flex-direction: column;
-} */
-
 #map {
     width: 100%; 
     height: 100vh; 
@@ -27,6 +13,11 @@
 img {
     width: 35px;
     height: 35px;
+}
+
+.small-img {
+    width: 20px;
+    height: 20px;
 }
 
 .padding-nav {
@@ -80,23 +71,44 @@ nav {
     height: 600px;
 }
 
+.box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.box-header img {
+    margin-right: 10px;
+}
+
+.box-header span {
+    font-size: 18px;
+}
+
+/* Adjust the styles for left-box and right-box */
+.left-side, .right-side {
+    flex: 1;
+}
+
 /* Style for the left box */
 .left-box {
     flex: 2;
-    /* background-color: lightblue; Adjust the background color as needed */
-    /* padding: 10px; */
     margin-right: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    overflow: hidden;
+    height: 500px;
 }
 
 /* Style for the right box */
 .right-box {
     flex: 1;
-    background-color: white; /* Adjust the background color as needed */
+    background-color: white;
     padding: 30px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    overflow: hidden;
+    height: 440px;
 }
 
 /* Style for the button */

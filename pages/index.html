@@ -10,25 +10,6 @@
     crossorigin=""/>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<!-- <header>
-    <div class="containerRow">
-        <div>
-            <img src="../img/burger-bar.png" alt="Menu">
-        </div>
-        <div class="containerRow">
-            <img src="../img/ambulance.png" alt="Ambulance">
-            <h1>Ambulance</h1>
-        </div>
-        <div class="containerRow">
-            <img src="../img/bell.png" alt="Alert">
-            <div>
-                <p>Naam</p>
-                <p>Positie</p>
-            </div>
-            <img src="../img/account.png" alt="Profile">
-        </div>
-    </div>
-</header> -->
 <body class="containerRow">
     <nav>
         <div class="menu padding-nav">
@@ -44,72 +25,70 @@
 
     <!-- Content container -->
     <div class="content">
-        <!-- Left box -->
-        <div class="left-box">
-            <div id="map"></div>
-            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin="">
-            </script>
-            <script>
-                //The map itself
-                var map = L.map('map').setView([51.82407342098371, 5.863137559079454], 13);
-                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                }).addTo(map);
 
-                //realtime location tracker
-                if(!navigator.geolocation){
-                    console.log("Your browser doesn't support geolocation features!");
-                }else{
-                    navigator.geolocation.getCurrentPosition(getPosition);
-                };
-                function getPosition(position){
-                    console.log(position);
-                    
-                    var lat = position.coords.latitude
-                    var long = position.coords.longitude
-                    var accuracy = position.coords.accuracy
+        <div class="left-side">
+            <!-- Left box header -->
+            <div class="box-header">
+                <img src="../img/google-maps.png" alt="markerPNG" class="small-img">
+                <span>Map</span>
+            </div>
+            
+            <!-- Left box -->
+            <div class="left-box">
+                <div id="map"></div>
+                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+                crossorigin="">
+                </script>
+                <script>
+                    //The map itself
+                    var map = L.map('map').setView([51.82407342098371, 5.863137559079454], 13);
+                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    }).addTo(map);
 
-                    var markerYou = L.marker([lat, long]).addTo(map);
-                    var circle = L.circle([lat, long], {radius: accuracy}).addTo(map)
-                    markerYou.bindPopup(`You are here! <br> Accuracy: ${accuracy}`).openPopup();
+                    //realtime location tracker
+                    if(!navigator.geolocation){
+                        console.log("Your browser doesn't support geolocation features!");
+                    }else{
+                        navigator.geolocation.getCurrentPosition(getPosition);
+                    };
+                    function getPosition(position){
+                        console.log(position);
+                        
+                        var lat = position.coords.latitude
+                        var long = position.coords.longitude
+                        var accuracy = position.coords.accuracy
 
-                    console.log("Your cordinate is lat:", lat, "long:",long, "accuracy",accuracy);
-                };
+                        var markerYou = L.marker([lat, long]).addTo(map);
+                        var circle = L.circle([lat, long], {radius: accuracy}).addTo(map)
+                        markerYou.bindPopup(`You are here! <br> Accuracy: ${accuracy}`).openPopup();
 
-                //Fixed Markers
-                var marker = L.marker([51.82535106627471, 5.853797597109541]).addTo(map);
-                marker.bindPopup("I am ambulance: <b>1</b>").openPopup();
-                var marker1 = L.marker([51.82443477138034, 5.879375351198829]).addTo(map);
-                marker1.bindPopup("I am ambulance: <b>2</b>").openPopup();
-            </script>
+                        console.log("Your cordinate is lat:", lat, "long:",long, "accuracy",accuracy);
+                    };
+
+                    //Fixed Markers
+                    var marker = L.marker([51.82535106627471, 5.853797597109541]).addTo(map);
+                    marker.bindPopup("I am ambulance: <b>1</b>").openPopup();
+                    var marker1 = L.marker([51.82443477138034, 5.879375351198829]).addTo(map);
+                    marker1.bindPopup("I am ambulance: <b>2</b>").openPopup();
+                </script>
+            </div>
         </div>
 
-        <!-- Right box -->
-        <div class="right-box">
-            <button class="button">End tracking</button>
+        <div class="right-side">
+            <!-- Right box header -->
+            <div class="box-header">
+                <img src="../img/application.png" alt="otherPNG" class="small-img">
+                <span>Other</span>
+            </div>
+
+            <!-- Right box -->
+            <div class="right-box">
+                <button class="button">End tracking</button>
+            </div>
         </div>
     </div>
-    <!-- <div class="containerColumn">
-        <div class="containerRow">
-            <img src="../img/google-maps.png" alt="Location">
-            <p>Map</p>
-        </div>
-        <img src="" alt="Map"> Moet de GPS map laten zien
-    </div>
-    <div class="containerColumn">
-        <div class="containerRow">
-            <img src="../img/application.png" alt="Other">
-            <p>Other</p>
-        </div>
-        <div>
-            <button>End tracking</button>
-        </div>
-    </div> -->
 </body>
-<!-- <footer>
-    <div></div>
-</footer> -->
 </html>
