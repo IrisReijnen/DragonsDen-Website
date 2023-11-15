@@ -74,16 +74,16 @@
 
                     var markerYou = L.marker([lat, long]).addTo(map);
                     var circle = L.circle([lat, long], {radius: accuracy}).addTo(map)
-                    markerYou.bindPopup(`You are here! <br> accuracy: ${accuracy}`).openPopup();
+                    markerYou.bindPopup(`You are here! <br> Accuracy: ${accuracy}`).openPopup();
 
                     console.log("Your cordinate is lat:", lat, "long:",long, "accuracy",accuracy);
                 };
 
                 //Fixed Markers
                 var marker = L.marker([51.82535106627471, 5.853797597109541]).addTo(map);
-                marker.bindPopup("I am abulance: <b>1</b>").openPopup();
+                marker.bindPopup("I am ambulance: <b>1</b>").openPopup();
                 var marker1 = L.marker([51.82443477138034, 5.879375351198829]).addTo(map);
-                marker1.bindPopup("I am abulance: <b>2</b>").openPopup();
+                marker1.bindPopup("I am ambulance: <b>2</b>").openPopup();
             </script>
         </div>
 
